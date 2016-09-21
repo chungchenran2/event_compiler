@@ -1,0 +1,47 @@
+<!--
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Event Sjsus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_sjsus.each do |event_sjsu| %>
+      <tr>
+        <td><%= event_sjsu.title %></td>
+        <td><%= event_sjsu.body %></td>
+        <td><%= link_to 'Show', event_sjsu %></td>
+        <td><%= link_to 'Edit', edit_event_sjsu_path(event_sjsu) %></td>
+        <td><%= link_to 'Destroy', event_sjsu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+-->
+<h1>Listing Events at SJSU</h1>
+<!--
+  <% @event_sjsus.each do |event_sjsu| %>
+  <h2><%= link_to event_sjsu.title, event_sjsu %></h2>
+  <p><i><%= friendly_date event_sjsu.created_at %></i></p>
+  <p><%= event_sjsu.body %></p>
+  <p>
+    <%= link_to 'Edit', edit_event_sjsu_path(event_sjsu) %>
+    <%= link_to 'Destroy', event_sjsu, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
+-->
+<%= render @event_sjsus %>
+<%# end %>
+
+<br>
+
+<%= link_to 'New Event sjsu', new_event_sjsu_path %>

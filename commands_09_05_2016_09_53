@@ -1,0 +1,13 @@
+  508  mkdir code
+  509  cd code
+  510  ls
+  511  rails new event_compiler
+  512  history
+  513  ls
+  514  cd event_compiler
+  515  ls
+  516  ls bin
+  517  ls -l bin
+  518  bin/rails server
+  519  history
+  520  history > commands_09_05_2016_09_53

@@ -1,0 +1,1 @@
+json.partial! "event_sjsus/event_sjsu", event_sjsu: @event_sjsu

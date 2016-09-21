@@ -1,0 +1,11 @@
+  501  cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/
+  502  ls
+  503  cd code
+  504  ls
+  505  cd event_compiler/
+  506  bin/rails g migration add_source_to_event_sjsus source:string
+  507  bin/rake db:migrate
+  508  bin/rails console
+  509  history
+  510  ls
+  511  history > commands_09_08_2016_11_06

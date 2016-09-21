@@ -1,0 +1,5 @@
+  508  bin/rake routes
+  509  bin/rails console
+  510  bin/rails server
+  511  bin/rails generate controller comments
+  512  history > commands_09_11_2016_13_25

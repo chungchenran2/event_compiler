@@ -1,0 +1,4 @@
+  505  bin/rails generate scaffold Event_sjsu title:string body:text
+  506  bin/rake db:migrate
+  507  history
+  508  history > commands_09_05_2016_12_52

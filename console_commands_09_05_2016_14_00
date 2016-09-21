@@ -1,0 +1,767 @@
+Last login: Mon Sep  5 09:39:32 on ttys000
+Johns-MacBook-Pro-2:~ johnran$ cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/
+Johns-MacBook-Pro-2:CMPE_131_Software_Engineering johnran$ cd code
+Johns-MacBook-Pro-2:code johnran$ cd event_compiler/
+Johns-MacBook-Pro-2:event_compiler johnran$ ls
+Gemfile				app				config.ru			public
+Gemfile.lock			bin				db				test
+README.rdoc			commands_09_05_2016_09_53	lib				tmp
+Rakefile			config				log				vendor
+Johns-MacBook-Pro-2:event_compiler johnran$ bin/rails generate scaffold Event_sjsu title:string body:text
+Running via Spring preloader in process 2254
+      invoke  active_record
+      create    db/migrate/20160905181203_create_event_sjsus.rb
+      create    app/models/event_sjsu.rb
+      invoke    test_unit
+      create      test/models/event_sjsu_test.rb
+      create      test/fixtures/event_sjsus.yml
+      invoke  resource_route
+       route    resources :event_sjsus
+      invoke  scaffold_controller
+      create    app/controllers/event_sjsus_controller.rb
+      invoke    erb
+      create      app/views/event_sjsus
+      create      app/views/event_sjsus/index.html.erb
+      create      app/views/event_sjsus/edit.html.erb
+      create      app/views/event_sjsus/show.html.erb
+      create      app/views/event_sjsus/new.html.erb
+      create      app/views/event_sjsus/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/event_sjsus_controller_test.rb
+      invoke    helper
+      create      app/helpers/event_sjsus_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/event_sjsus/index.json.jbuilder
+      create      app/views/event_sjsus/show.json.jbuilder
+      create      app/views/event_sjsus/_event_sjsu.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/event_sjsus.coffee
+      invoke    scss
+      create      app/assets/stylesheets/event_sjsus.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+Johns-MacBook-Pro-2:event_compiler johnran$ bin/rake db:migrate
+Running via Spring preloader in process 2259
+== 20160905181203 CreateEventSjsus: migrating =================================
+-- create_table(:event_sjsus)
+   -> 0.0020s
+== 20160905181203 CreateEventSjsus: migrated (0.0021s) ========================
+
+Johns-MacBook-Pro-2:event_compiler johnran$ history
+    8  ssh chungchenran@voyager.deanza.edu
+    9  mkdir allmemos
+   10  scp chungchenran@voyager.deanza.edu:y allmemos
+   11  ssh chungchenran@voyager.deanza.edu 'ls -l allmemos'
+   12  ssh chungchenran@voyager.deanza.edu 'ls -l ~/allmemos'
+   13  ls allmemos
+   14  scp chungchenran@voyager.deanza.edu:y allmemos2
+   15  ls
+   16  cat allmemos2
+   17  ls ~/.ssh
+   18  ls /etc/ssh
+   19  cat /etc/ssh/ssh_config
+   20  cat /etc/ssh/sshd_config
+   21  ls /etc
+   22  cat /etc/ssh/ssh_config
+   23  ls ~/.ssh
+   24  chungchenran@voyager.deanza.edu
+   25  ssh chungchenran@voyager.deanza.edu
+   26  cd Documents/
+   27  cd De\ Anza/
+   28  cd CIS_18A_Introduction_to_Unix_Linux/
+   29  cd temp
+   30  ls
+   31  scp memo1 chungchenran@voyager.deanza.edu
+   32  ls
+   33  rm chungchenran\@voyager.deanza.edu 
+   34  scp memo1 chungchenran@voyager.deanza.edu:
+   35  rm memo1
+   36  ssh chungchenran@voyager.deanza.edu
+   37  scp chungchenran@voyager.deanza.edu:memo1 
+   38  scp chungchenran@voyager.deanza.edu:memo1 memo1
+   39  ls
+   40  cat memo1
+   41  ls /etc/ssh/ssh_config
+   42  cat /etc/ssh/ssh_config
+   43  ssh chungchenran@voyager.deanza.edu
+   44  ls
+   45  cd Applications/
+   46  ls
+   47  cd ..
+   48  ls
+   49  cd ..
+   50  ls
+   51  cd ..
+   52  ls
+   53  pwd
+   54  cd Applications/
+   55  ls
+   56  ls -l Sophos\ Anti-Virus.app/
+   57  sudo rm /Applications/Sophos\ Anti-Virus.app/
+   58  sudo rm -r /Applications/Sophos\ Anti-Virus.app/
+   59  ls
+   60  cd /Library/Application\ Support/
+   61  ls
+   62  ls -l 
+   63  sudo rm -r Sophos/
+   64  ls
+   65  cd ..
+   66  ls
+   67  cd Caches/
+   68  ls
+   69  cd ..
+   70  cd Contextual\ Menu\ Items/
+   71  ls
+   72  ls -l
+   73  cd ..
+   74  cd Extensions/
+   75  ls
+   76  ls Sophos*
+   77  ls -l Sophos*
+   78  ls -l
+   79  sudo rm -r Sophos*
+   80  ls -l
+   81  cd ..
+   82  cd Frameworks/
+   83  ls
+   84  ls -l
+   85  sudo rm -r SAVI.framework/
+   86  sudo rm -r SUMScanKit.framework/
+   87  sudo mv SophosGenericsCommon.framework/ tmpSophosGenericsCommon.frame
+   88  ls
+   89  sudo mv SophosGenericsCore.framework/ tmpSophosGenericsCore.framework
+   90  cd ..
+   91  cd LaunchAgents/
+   92  ls -l
+   93  ls
+   94  cd ..
+   95  cd LaunchDaemons/
+   96  ls
+   97  cd ..
+   98  ls
+   99  sudo rm -r Sophos\ Anti-Virus/
+  100  ls
+  101  cd usr
+  102  ls -a
+  103  sudo cd usr
+  104  cd /Applications/
+  105  ls
+  106  cd ..
+  107  cd Library/
+  108  cd Application\ Support/
+  109  ls
+  110  cd ..
+  111  cd Caches/
+  112  ls
+  113  cd ..
+  114  cd Contextual\ Menu\ Items/
+  115  ls
+  116  cd ..
+  117  cd Extensions/
+  118  ls
+  119  cd ..
+  120  cd Frameworks/
+  121  ls
+  122  sudo rm -r tmpSophosGenericsCommon.frame/
+  123  ls
+  124  sudo rm -r tmpSophosGenericsCore.framework/
+  125  ls
+  126  cd ..
+  127  cd LaunchAgents/
+  128  ls
+  129  cd ..
+  130  cd LaunchDaemons/
+  131  ls
+  132  cd ..
+  133  ls
+  134  cd usr
+  135  cd Documents/
+  136  cd De_Anza/
+  137  cd CIS_18A_Introduction_to_Unix_Linux/
+  138  cd temp
+  139  ls
+  140  srm filein
+  141  ls
+  142  ps ax
+  143  ps ax | less
+  144  ps aux
+  145  ps aux | grep kmetcalf | sort
+  146  ps aux | grep cran | sort
+  147  ps aux | grep johnran | sort
+  148  ssh chungchenran@voyager.deanza.edu
+  149  locate init
+  150  ssh chungchenran@voyager.deanza.edu
+  151  man cat
+  152  man file
+  153  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  154  ls -l
+  155  cat -v memo1
+  156  cat -v lines
+  157  man cat
+  158  man tail
+  159  man sort
+  160  man uniq
+  161  man head
+  162  man sort
+  163  man tail
+  164  man bzip2
+  165  man gzip
+  166  man tar
+  167  man bzip2
+  168  man find
+  169  man find
+  170  ssh chungchenran@voyager.deanza.edu
+  171  man mkdir
+  172  man rmdir
+  173  ~/.ssh
+  174  cd .ssh
+  175  ls
+  176  ssh-keygen -t rsa
+  177  ls
+  178  cat id_rsa
+  179  cat id_rsa.pub 
+  180  ls -l
+  181  ls /etc/ssh
+  182  ssh_keygen -lf id_rsa.pub
+  183  ssh-keygen -lf id_rsa.pub
+  184  ssh-copy-id chungchenran@voyager.deanza.edu
+  185  man ssh-copy-id
+  186  rsync --archive --verbose id_rsa.pub chungchenran@voyager.deanza.edu:id_rsa.pub
+  187  ssh chungchenran@voyager.deanza.edu
+  188  ssh voyager.deanza.edu
+  189  ssh chungchenran@voyager.deanza.edu
+  190  ssh chungchenran@voyager.deanza.edu
+  191  ssh chungchenran@voyager.deanza.edu
+  192  ssh chungchenran@voyager.deanza.edu "who"
+  193  ssh -Y chungchenran@voyager.deanza.edu xterm
+  194  cat .ssh/known_hosts 
+  195  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  196  touch report.pl
+  197  ls -l report.pl 
+  198  chmod g+w report.pl 
+  199  ls -l report.pl 
+  200  chmod u+x report.pl 
+  201  chmod g-w report.pl 
+  202  chmod o+x report.pl 
+  203  ls -l report.pl 
+  204  chmod 0745 report.pl 
+  205  ls -l report.pl 
+  206  mkdir tempdir
+  207  ls -ld t*
+  208  chmod g+w tempdir/
+  209  ls -ld t*
+  210  echo "Hello." > tempdir/a.txt
+  211  ls -l tempdir/
+  212  chmod g+w tempdir/a.txt
+  213  ls -l tempdir/
+  214  cat tempdir/a.txt
+  215  chmod tempdir u-x
+  216  chmod u-x tempdir
+  217  ls -ld tempdir/
+  218  ls -l tempdir/
+  219  chmod 000 tempdir
+  220  ls -ld t*
+  221  ls -l tempdir/
+  222  chmod tempdir u+x
+  223  chmod u+x tempdir/
+  224  ls -ld t*
+  225  ls -l tempdir/
+  226  ls -l tempdir/a.txt
+  227  cat tempdir/a.txt
+  228  cd tempdir/
+  229  ls
+  230  ls a.txt
+  231  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  232  ls
+  233  stat a
+  234  stat lit
+  235  touch a.txt
+  236  ls -l a.txt
+  237  ln a.txt c.txt
+  238  ls -l a.txt c.txt
+  239  chmod 700 c.txt
+  240  ls -l a.txt c.txt
+  241  echo abcdefghijklmnopqrstuvwxyz > a.txt
+  242  rm c.txt
+  243  echo abcdefghijklmnopqrstuvwxyz > a.txt
+  244  ln a.txt c.txt
+  245  ln -s a.txt b.txt
+  246  stat a.txt b.txt c.txt
+  247  ssh chungchenran@voyager.deanza.edu
+  248  ssh chungchenran@voyager.deanza.edu
+  249  ssh chungchenran@voyager.deanza.edu
+  250  ssh chungchenran@voyager.deanza.edu
+  251  ssh chungchenran@voyager.deanza.edu
+  252  ssh chungchenran@voyager.deanza.edu
+  253  ssh chungchenran@voyager.deanza.edu
+  254  ssh chungchenran@voyager.deanza.edu
+  255  ssh chungchenran@voyager.deanza.edu
+  256  echo -e "Hello, World\041"
+  257  /bin/echo -e "Hello, World\041"
+  258  ssh chungchenran@voyager.deanza.edu
+  259  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  260  ls
+  261  cat a
+  262  cat aa
+  263  uniq aa
+  264  sort -u aa
+  265  ssh chungchenran@voyager.deanza.edu
+  266  ssh chungchenran@voyager.deanza.edu
+  267  ssh chungchenran@voyager.deanza.edu
+  268  ssh chungchenran@voyager.deanza.edu
+  269  ssh chungchenran@voyager.deanza.edu
+  270  ssh chungchenran@voyager.deanza.edu
+  271  ssh chungchenran@voyager.deanza.edu
+  272  ssh chungchenran@voyager.deanza.edu
+  273  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  274  ls
+  275  ls -l
+  276  vim a
+  277  vim aa
+  278  vim aa
+  279  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  280  vim aa
+  281  vim bb
+  282  vim aa
+  283  ls ~/.v*
+  284  cat ~/.viminfo
+  285  vim aa
+  286  ssh chungchenran@voyager.deanza.edu
+  287  cd
+  288  ls -a
+  289  vim .vimrc
+  290  source .vimrc
+  291  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  292  vim aa
+  293  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  294  ls
+  295  ls
+  296  cat cc
+  297  cat cc
+  298  cat cc
+  299  ssh chungchenran@voyager.deanza.edu
+  300  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  301  vim aa
+  302  vim ~/.vimrc
+  303  source ~/.vimrc
+  304  vim aa
+  305  ssh chungchenran@voyager.deanza.edu
+  306  ssh chungchenran@voyager.deanza.edu
+  307  ssh chungchenran@voyager.deanza.edu
+  308  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  309  vim aa
+  310  ssh chungchenran@voyager.deanza.edu
+  311  ssh chungchenran@voyager.deanza.edu
+  312  ssh chungchenran@voyager.deanza.edu
+  313  ssh chungchenran@voyager.deanza.edu
+  314  cat .vimrc
+  315  ssh chungchenran@voyager.deanza.edu
+  316  ssh chungchenran@voyager.deanza.edu
+  317  ssh chungchenran@voyager.deanza.edu
+  318  ssh chungchenran@voyager.deanza.edu
+  319  ssh chungchenran@voyager.deanza.edu
+  320  ssh chungchenran@voyager.deanza.edu
+  321  ssh chungchenran@voyager.deanza.edu
+  322  ssh chungchenran@voyager.deanza.edu
+  323  ssh chungchenran@voyager.deanza.edu
+  324  ssh chungchenran@voyager.deanza.edu
+  325  ssh chungchenran@voyager.deanza.edu
+  326  person="max\tand\tzach"
+  327  echo $person
+  328  echo "$person"
+  329  person="max\011and\011zach"
+  330  echo $person
+  331  person=max\011and\011zach
+  332  echo $person
+  333  ssh chungchenran@voyager.deanza.edu
+  334  ssh chungchenran@voyager.deanza.edu
+  335  echo $PATH
+  336  ls
+  337  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  338  ls
+  339  ls -l
+  340  cat a
+  341  a
+  342  ./a
+  343  echo $PATH
+  344  export PATH="$PATH:"
+  345  echo $PATH
+  346  a
+  347  ssh chungchenran@voyager.deanza.edu
+  348  ssh chungchenran@voyager.deanza.edu
+  349  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  350  ls
+  351  ls --color=auto
+  352  ls --autocolor
+  353  ls -f
+  354  ls -F
+  355  cd lit
+  356  ls
+  357  ls -F
+  358  cat days
+  359  cat days2
+  360  cat days and | sort > output
+  361  cat output
+  362  cat days2
+  363  cat days2 and | sort > output
+  364  cat output
+  365  cat days2 and |& sort > output
+  366  cat days2 and 2>&1| sort > output
+  367  cat output
+  368  cat days2 and 2>&1 | sort > output
+  369  cat output
+  370  ssh chungchenran@voyager.deanza.edu
+  371  ssh chungchenran@voyager.deanza.edu
+  372  ssh chungchenran@voyager.deanza.edu
+  373  locale
+  374  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  375  ls
+  376  cd lit
+  377  ls
+  378  ls -F
+  379  cd dir4
+  380  ls
+  381  ls -F
+  382  touch m666 Makefile merry
+  383  echo $LANG
+  384  ls
+  385  ls [l-n]*
+  386  locale -a
+  387  ssh chungchenran@voyager.deanza.edu
+  388  ls /usr/share/locale
+  389  ssh chungchenran@voyager.deanza.edu
+  390  systemsetup -gettimezone
+  391  sudo systemsetup -gettimezone
+  392  systemsetup -listtimezones
+  393  sudo systemsetup -listtimezones
+  394  ssh chungchenran@voyager.deanza.edu
+  395  pstree -p
+  396  ps --forest
+  397  ssh chungchenran@voyager.deanza.edu
+  398  ssh chungchenran@voyager.deanza.edu
+  399  ssh chungchenran@voyager.deanza.edu
+  400  ssh chungchenran@voyager.deanza.edu
+  401  ssh chungchenran@voyager.deanza.edu
+  402  ssh chungchenran@voyager.deanza.edu
+  403  ssh chungchenran@voyager.deanza.edu
+  404  ssh chungchenran@voyager.deanza.edu
+  405  ssh chungchenran@voyager.deanza.edu
+  406  ssh chungchenran@voyager.deanza.edu
+  407  ssh chungchenran@voyager.deanza.edu
+  408  ssh chungchenran@voyager.deanza.edu
+  409  ssh chungchenran@voyager.deanza.edu
+  410  ssh chungchenran@voyager.deanza.edu
+  411  ssh chungchenran@voyager.deanza.edu
+  412  ping 172.16.254.130
+  413  ssh chungchenran@voyager.deanza.edu
+  414  ssh chungchenran@voyager.deanza.edu
+  415  bash --help
+  416  whatis cat
+  417  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  418  touch -test
+  419  hostname
+  420  lpstat -p
+  421  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  422  stat -f .
+  423  man grep
+  424  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  425  ls -l aa
+  426  touch aa
+  427  ls -l aa
+  428  cat bb
+  429  vim bb
+  430  cat bb
+  431  cat -s bb
+  432  head aa
+  433  tail aa
+  434  more aa
+  435  less aa
+  436  ssh chungchenran@voyager.deanza.edu
+  437  ssh chungchenran@voyager.deanza.edu
+  438  ssh chungchenran@voyager.deanza.edu
+  439  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  440  vim aa
+  441  ls
+  442  ls -d a*
+  443  ssh chungchenran@voyager.deanza.edu
+  444  ssh chungchenran@voyager.deanza.edu
+  445  cd Documents/De_Anza/CIS_18A_Introduction_to_Unix_Linux/temp
+  446  ls
+  447  ssh chungchenran@voyager.deanza.edu
+  448  ssh chungchenran@voyager.deanza.edu
+  449  ls
+  450  ls -i
+  451  ls -l
+  452  alias ll='ls -l'
+  453  ll
+  454  alias
+  455  pwd
+  456  cd Applications/
+  457  touch LockDown\ Browser
+  458  vim LockDown\ Browser 
+  459  chmod u+x LockDown\ Browser 
+  460  cd ..
+  461  alias lockb='$HOME/Applications/LockDown\ Browser'
+  462  lockb
+  463  ln -s /Users/johnran/Applications/LockDown\ Browser $HOME/Desktop/lockb
+  464  $HOME/Desktop/lockb
+  465  nslookup
+  466  man nslookup
+  467  host 130.65.255.101
+  468  man host
+  469  dig www.sjsu.edu
+  470  dig -x 130.65.255.101
+  471  man dig
+  472  exit
+  473  netstat
+  474  traceroute www.intel.com
+  475  ping gaia
+  476  ping gaia.cs.umass.edu
+  477  traceroute www.intel.com
+  478  traceroute www.intel.com
+  479  cd Documents/SJSU/
+  480  ls
+  481  cd Courses/
+  482  ls
+  483  cd 2016\ Fall
+  484  ls
+  485  cd CMPE\ 131
+  486  cd CMPE\ 131\ Software\ Engineering/
+  487  ls
+  488  irb
+  489  cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/
+  490  irb
+  491  cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/
+  492  irb
+  493  vim widgets.csv
+  494  irb
+  495  vim widgets.csv
+  496  irb
+  497  cd Documents/SJSU/Courses/2016_Fall/CMPE_148_Computer_Networking/
+  498  telnet cis.poly.edu 80
+  499  telnet cis.poly.edu 80
+  500  telnet cis.poly.edu 80
+  501  cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/
+  502  cd code
+  503  cd event_compiler/
+  504  ls
+  505  bin/rails generate scaffold Event_sjsu title:string body:text
+  506  bin/rake db:migrate
+  507  history
+Johns-MacBook-Pro-2:event_compiler johnran$ history > commands_09_05_2016_12_52
+Johns-MacBook-Pro-2:event_compiler johnran$ vim commands_09_05_2016_12_52 
+Johns-MacBook-Pro-2:event_compiler johnran$ ls
+Gemfile				bin				db				tmp
+Gemfile.lock			commands_09_05_2016_09_53	lib				vendor
+README.rdoc			commands_09_05_2016_12_52	log
+Rakefile			config				public
+app				config.ru			test
+Johns-MacBook-Pro-2:event_compiler johnran$ ls db
+development.sqlite3	migrate			schema.rb		seeds.rb
+Johns-MacBook-Pro-2:event_compiler johnran$ ls -l db
+total 56
+-rw-r--r--  1 johnran  staff  20480 Sep  5 11:19 development.sqlite3
+drwxr-xr-x  3 johnran  staff    102 Sep  5 11:12 migrate
+-rw-r--r--  1 johnran  staff    989 Sep  5 11:14 schema.rb
+-rw-r--r--  1 johnran  staff    343 Sep  5 09:42 seeds.rb
+Johns-MacBook-Pro-2:event_compiler johnran$ bin/rails console
+Running via Spring preloader in process 2354
+Loading development environment (Rails 4.2.6)
+irb(main):001:0> exit
+Johns-MacBook-Pro-2:event_compiler johnran$ bin/rails console
+Running via Spring preloader in process 2358
+Loading development environment (Rails 4.2.6)
+irb(main):001:0> Event_sjsu.create title: "First Event"
+LoadError: Unable to autoload constant Event_sjsu, expected /Users/johnran/Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code/event_compiler/app/models/event_sjsu.rb to define it
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:495:in `load_missing_constant'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:184:in `const_missing'
+	from (irb):1
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:110:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:9:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands.rb:17:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/johnran/Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code/event_compiler/bin/rails:9:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+irb(main):002:0> Event_sjsu.create title: "First Event"
+LoadError: Unable to autoload constant Event_sjsu, expected /Users/johnran/Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code/event_compiler/app/models/event_sjsu.rb to define it
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:495:in `load_missing_constant'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:184:in `const_missing'
+	from (irb):2
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:110:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:9:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands.rb:17:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/johnran/Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code/event_compiler/bin/rails:9:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+irb(main):003:0> EventSjsu.create title: "First Event"
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "event_sjsus" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "First Event"], ["created_at", "2016-09-05 20:20:17.133326"], ["updated_at", "2016-09-05 20:20:17.133326"]]
+   (2.5ms)  commit transaction
+=> #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">
+irb(main):004:0> event = EventSjsu.new
+=> #<EventSjsu id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+irb(main):005:0> event.title = "Second Event"
+=> "Second Event"
+irb(main):006:0> event.save
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "event_sjsus" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Second Event"], ["created_at", "2016-09-05 20:25:00.458731"], ["updated_at", "2016-09-05 20:25:00.458731"]]
+   (2.7ms)  commit transaction
+=> true
+irb(main):007:0> events = EventSjsu.all
+  EventSjsu Load (0.2ms)  SELECT "event_sjsus".* FROM "event_sjsus"
+=> #<ActiveRecord::Relation [#<EventSjsu id: 1, title: "New Student Meeting", body: "New Students of 2016 Fall get together. Location: ...", created_at: "2016-09-05 18:19:00", updated_at: "2016-09-05 18:19:00">, #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">, #<EventSjsu id: 3, title: "Second Event", body: nil, created_at: "2016-09-05 20:25:00", updated_at: "2016-09-05 20:25:00">]>
+irb(main):008:0> EventSjsu.first
+  EventSjsu Load (0.3ms)  SELECT  "event_sjsus".* FROM "event_sjsus"  ORDER BY "event_sjsus"."id" ASC LIMIT 1
+=> #<EventSjsu id: 1, title: "New Student Meeting", body: "New Students of 2016 Fall get together. Location: ...", created_at: "2016-09-05 18:19:00", updated_at: "2016-09-05 18:19:00">
+irb(main):009:0> EventSjsu.last
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus"  ORDER BY "event_sjsus"."id" DESC LIMIT 1
+=> #<EventSjsu id: 3, title: "Second Event", body: nil, created_at: "2016-09-05 20:25:00", updated_at: "2016-09-05 20:25:00">
+irb(main):010:0> event = EventSjsu.find 2
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 2]]
+=> #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">
+irb(main):011:0> event = EventSjsu.where(title: "First Event").first
+  EventSjsu Load (2.6ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."title" = ?  ORDER BY "event_sjsus"."id" ASC LIMIT 1  [["title", "First Event"]]
+=> #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">
+irb(main):012:0> event = EventSjsu.find_by title: "First Event"
+  EventSjsu Load (4.7ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."title" = ? LIMIT 1  [["title", "First Event"]]
+=> #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">
+irb(main):013:0> event = EventSjsu.find 2
+  EventSjsu Load (0.1ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 2]]
+=> #<EventSjsu id: 2, title: "First Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:20:17">
+irb(main):014:0> event.title = "1st Event"
+=> "1st Event"
+irb(main):015:0> event.save
+   (0.1ms)  begin transaction
+  SQL (0.6ms)  UPDATE "event_sjsus" SET "title" = ?, "updated_at" = ? WHERE "event_sjsus"."id" = ?  [["title", "1st Event"], ["updated_at", "2016-09-05 20:36:49.346506"], ["id", 2]]
+   (1.7ms)  commit transaction
+=> true
+irb(main):016:0> event = EventSjsu.find 3
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 3]]
+=> #<EventSjsu id: 3, title: "Second Event", body: nil, created_at: "2016-09-05 20:25:00", updated_at: "2016-09-05 20:25:00">
+irb(main):017:0> event.update title: "2nd Event"
+   (0.1ms)  begin transaction
+  SQL (1.3ms)  UPDATE "event_sjsus" SET "title" = ?, "updated_at" = ? WHERE "event_sjsus"."id" = ?  [["title", "2nd Event"], ["updated_at", "2016-09-05 20:39:33.068138"], ["id", 3]]
+   (2.6ms)  commit transaction
+=> true
+irb(main):018:0> EventSjsu.create title: "Third event!", body: "This is my third event."
+   (1.3ms)  begin transaction
+  SQL (0.5ms)  INSERT INTO "event_sjsus" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Third event!"], ["body", "This is my third event."], ["created_at", "2016-09-05 20:43:28.966236"], ["updated_at", "2016-09-05 20:43:28.966236"]]
+   (2.7ms)  commit transaction
+=> #<EventSjsu id: 4, title: "Third event!", body: "This is my third event.", created_at: "2016-09-05 20:43:28", updated_at: "2016-09-05 20:43:28">
+irb(main):019:0> event = EventSjsu.new
+=> #<EventSjsu id: nil, title: nil, body: nil, created_at: nil, updated_at: nil>
+irb(main):020:0> event.title = "Fourth event"
+=> "Fourth event"
+irb(main):021:0> event.body = "This is my fourth event."
+=> "This is my fourth event."
+irb(main):022:0> event.save
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  INSERT INTO "event_sjsus" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Fourth event"], ["body", "This is my fourth event."], ["created_at", "2016-09-05 20:44:38.278886"], ["updated_at", "2016-09-05 20:44:38.278886"]]
+   (2.8ms)  commit transaction
+=> true
+irb(main):023:0> events = EventSjsu.all
+  EventSjsu Load (0.3ms)  SELECT "event_sjsus".* FROM "event_sjsus"
+=> #<ActiveRecord::Relation [#<EventSjsu id: 1, title: "New Student Meeting", body: "New Students of 2016 Fall get together. Location: ...", created_at: "2016-09-05 18:19:00", updated_at: "2016-09-05 18:19:00">, #<EventSjsu id: 2, title: "1st Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:36:49">, #<EventSjsu id: 3, title: "2nd Event", body: nil, created_at: "2016-09-05 20:25:00", updated_at: "2016-09-05 20:39:33">, #<EventSjsu id: 4, title: "Third event!", body: "This is my third event.", created_at: "2016-09-05 20:43:28", updated_at: "2016-09-05 20:43:28">, #<EventSjsu id: 5, title: "Fourth event", body: "This is my fourth event.", created_at: "2016-09-05 20:44:38", updated_at: "2016-09-05 20:44:38">]>
+irb(main):024:0> EventSjsu.first
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus"  ORDER BY "event_sjsus"."id" ASC LIMIT 1
+=> #<EventSjsu id: 1, title: "New Student Meeting", body: "New Students of 2016 Fall get together. Location: ...", created_at: "2016-09-05 18:19:00", updated_at: "2016-09-05 18:19:00">
+irb(main):025:0> EventSjsu.last
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus"  ORDER BY "event_sjsus"."id" DESC LIMIT 1
+=> #<EventSjsu id: 5, title: "Fourth event", body: "This is my fourth event.", created_at: "2016-09-05 20:44:38", updated_at: "2016-09-05 20:44:38">
+irb(main):026:0> event = EventSjsu.find 2
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 2]]
+=> #<EventSjsu id: 2, title: "1st Event", body: nil, created_at: "2016-09-05 20:20:17", updated_at: "2016-09-05 20:36:49">
+irb(main):027:0> event = EventSjsu.where(title: "First event!").first
+  EventSjsu Load (3.6ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."title" = ?  ORDER BY "event_sjsus"."id" ASC LIMIT 1  [["title", "First event!"]]
+=> nil
+irb(main):028:0> event = EventSjsu.find_by title: "First event!"
+  EventSjsu Load (0.1ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."title" = ? LIMIT 1  [["title", "First event!"]]
+=> nil
+irb(main):029:0> event = EventSjsu.find 4
+  EventSjsu Load (0.1ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 4]]
+=> #<EventSjsu id: 4, title: "Third event!", body: "This is my third event.", created_at: "2016-09-05 20:43:28", updated_at: "2016-09-05 20:43:28">
+irb(main):030:0> event.body = "My 3rd event."
+=> "My 3rd event."
+irb(main):031:0> event.save
+   (0.1ms)  begin transaction
+  SQL (0.5ms)  UPDATE "event_sjsus" SET "body" = ?, "updated_at" = ? WHERE "event_sjsus"."id" = ?  [["body", "My 3rd event."], ["updated_at", "2016-09-05 20:51:00.268703"], ["id", 4]]
+   (2.7ms)  commit transaction
+=> true
+irb(main):032:0> event = EventSjsu.find 5
+  EventSjsu Load (0.2ms)  SELECT  "event_sjsus".* FROM "event_sjsus" WHERE "event_sjsus"."id" = ? LIMIT 1  [["id", 5]]
+=> #<EventSjsu id: 5, title: "Fourth event", body: "This is my fourth event.", created_at: "2016-09-05 20:44:38", updated_at: "2016-09-05 20:44:38">
+irb(main):033:0> event.update body: "My 4th event"
+   (0.1ms)  begin transaction
+  SQL (0.4ms)  UPDATE "event_sjsus" SET "body" = ?, "updated_at" = ? WHERE "event_sjsus"."id" = ?  [["body", "My 4th event"], ["updated_at", "2016-09-05 20:51:48.555654"], ["id", 5]]
+   (2.7ms)  commit transaction
+=> true
+irb(main):034:0> count = EventSjsu.count
+   (3.7ms)  SELECT COUNT(*) FROM "event_sjsus"
+=> 5
+irb(main):035:0> EventSjsu.count
+   (0.2ms)  SELECT COUNT(*) FROM "event_sjsus"
+=> 5
+irb(main):036:0> date = EventSjsu.maximum :created_at
+   (0.3ms)  SELECT MAX("event_sjsus"."created_at") FROM "event_sjsus"
+=> Mon, 05 Sep 2016 20:44:38 UTC +00:00
+irb(main):037:0> EventSjsu.minimum :id
+   (0.4ms)  SELECT MIN("event_sjsus"."id") FROM "event_sjsus"
+=> 1
+irb(main):038:0> EventSjsu.maximum :id
+   (0.2ms)  SELECT MAX("event_sjsus"."id") FROM "event_sjsus"
+=> 5
+irb(main):039:0> history
+NameError: undefined local variable or method `history' for main:Object
+	from (irb):39
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:110:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/console.rb:9:in `start'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:68:in `console'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands/commands_tasks.rb:39:in `run_command!'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/commands.rb:17:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `block in require'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:274:in `require'
+	from /Users/johnran/Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code/event_compiler/bin/rails:9:in `<top (required)>'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `block in load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:240:in `load_dependency'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/activesupport-4.2.6/lib/active_support/dependencies.rb:268:in `load'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/commands/rails.rb:6:in `call'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/command_wrapper.rb:38:in `call'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:191:in `block in serve'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:161:in `fork'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:161:in `serve'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:131:in `block in run'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:125:in `loop'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application.rb:125:in `run'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/spring-1.7.2/lib/spring/application/boot.rb:19:in `<top (required)>'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from -e:1:in `<main>'
+irb(main):040:0> 
+

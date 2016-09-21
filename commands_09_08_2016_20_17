@@ -1,0 +1,17 @@
+  501  cd Documents/SJSU/Courses/2016_Fall/CMPE_131_Software_Engineering/code
+  502  ls
+  503  cd event_compiler/
+  504  bin/rails g model Comment author:string body:text eventSjsu:references
+  505  bin/rake db:migrate
+  506  ls
+  507  history > commands_09_08_2016_19_45
+  508  vim commands_09_08_2016_19_45 
+  509  bin/rails console
+  510  bin/rails console
+  511  bin/rake db:rollback
+  512  bin/rails g model Comment author:string body:text event_sjsu:references
+  513  bin/rake db:migrate
+  514  ls
+  515  rm commands_09_08_2016_19_45 
+  516  ls
+  517  history > commands_09_08_2016_20_17

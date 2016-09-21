@@ -1,0 +1,9 @@
+  <%# @event_sjsus.each do |event_sjsu| %>
+  <h2><%= link_to event_sjsu.title, event_sjsu %></h2>
+  <p><i><%= friendly_date event_sjsu.created_at %></i></p>
+  <p><%= event_sjsu.body %></p>
+  <p>
+    <%= link_to 'Edit', edit_event_sjsu_path(event_sjsu) %>
+    <%= link_to 'Destroy', event_sjsu, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<%# end %>
