@@ -27,7 +27,9 @@
 
 <br>
 -->
-<h1>Listing Events at SJSU</h1>
+<div class="page-header">
+  <h1>Listing Events at SJSU</h1>
+</div>
 <!--
   <% @event_sjsus.each do |event_sjsu| %>
   <h2><%= link_to event_sjsu.title, event_sjsu %></h2>
@@ -42,6 +44,4 @@
 <%= render @event_sjsus %>
 <%# end %>
 
-<br>
-
-<%= link_to 'New Event sjsu', new_event_sjsu_path %>
+<p><%= link_to 'New Event sjsu', new_event_sjsu_path %></p>
