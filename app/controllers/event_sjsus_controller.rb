@@ -1,4 +1,5 @@
 class EventSjsusController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_event_sjsu, only: [:show, :edit, :update, :destroy]
 
   # GET /event_sjsus
@@ -24,7 +25,8 @@ class EventSjsusController < ApplicationController
   # POST /event_sjsus
   # POST /event_sjsus.json
   def create
-    @event_sjsu = EventSjsu.new(event_sjsu_params)
+    #@event_sjsu = EventSjsu.new(event_sjsu_params)
+    @event_sjsu = current_user.event_sjsus.build(event_sjsu_params)
 
     respond_to do |format|
       if @event_sjsu.save

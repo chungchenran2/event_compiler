@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :users
   resources :event_sjsus do
     resources :comments, only: :create
   end
+  resources :sessions
+
+  get 'signup', to: 'users#new', as: 'signup'
+
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   root 'event_sjsus#index'
   #get 'login' => 'user_sessions#new'
   #post 'login' => 'user_sessions#create'

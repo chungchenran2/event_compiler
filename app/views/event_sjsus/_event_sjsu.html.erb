@@ -6,6 +6,7 @@
   	
   	<div class="panel-body">
   		<p><i><%= friendly_date event_sjsu.created_at %></i></p>
+  		<p><em>By <%= event_sjsu.user.name %></em></p>
   		<p><%= event_sjsu.body %></p>
   		<p>
     		<%= link_to 'Edit', edit_event_sjsu_path(event_sjsu) %>

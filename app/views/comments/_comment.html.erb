@@ -1,21 +1,15 @@
+<p><em><%= comment.user.name %> said:</em></p>
+<p><%= comment.body %></p>
+
 <!--
 <div class="panel panel-default">
--->
 	<div class="panel-body">
-		<p><strong><%= comment.author %></strong> said:</p>
-
-		<!--
+		<p><strong><%= comment.user.name %></strong> said:</p>
 		<blockquote>
-		-->
-			<%= comment.body %>
-		<!--
+		<p><%= comment.body %></p>
 		</blockquote>
-		-->
 	</div>
-<!--
 </div>
--->
-<!--
 <br>
 
 <%= comment.body %>
