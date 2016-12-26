@@ -49,3 +49,5 @@ group :development do
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+gem "paperclip", "~> 5.0.0"

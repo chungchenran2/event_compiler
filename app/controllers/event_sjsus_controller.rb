@@ -71,6 +71,6 @@ class EventSjsusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_sjsu_params
-      params.require(:event_sjsu).permit(:title, :body)
+      params.require(:event_sjsu).permit(:title, :body, :avatar)
     end
 end
