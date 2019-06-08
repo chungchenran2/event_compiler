@@ -8,6 +8,7 @@
   		<p><i><%= friendly_date event_sjsu.created_at %></i></p>
   		<p><em>By <%= event_sjsu.user.name %></em></p>
   		<p><%= event_sjsu.body %></p>
+      <p><%= image_tag @event_sjsu.avatar.url(:thumb) %></p>
   		<p>
     		<%= link_to 'Edit', edit_event_sjsu_path(event_sjsu), class: "btn btn-default" %>
     		<%= link_to 'Destroy', event_sjsu, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>

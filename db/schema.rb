@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161204170706) do
+ActiveRecord::Schema.define(version: 20161226232453) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "author"
@@ -28,10 +28,14 @@ ActiveRecord::Schema.define(version: 20161204170706) do
   create_table "event_sjsus", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "source"
     t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "event_sjsus", ["user_id"], name: "index_event_sjsus_on_user_id"
