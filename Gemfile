@@ -53,3 +53,5 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem "paperclip", "~> 5.0.0"
 
 gem "nokogiri", ">= 1.10.4"
+
+gem "loofah", ">= 2.3.1"
